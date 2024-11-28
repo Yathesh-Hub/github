@@ -1,0 +1,21 @@
+import matplotlib.pyplot as plt
+import cartopy.crs as ccrs
+from cartopy.io import shapereader
+from mpl_toolkits.basemap import Basemap
+#orthographic projection
+plt.figure(figsize=(5,5))
+projection=ccrs.Orthographic(central_longitude=50,central_latitude=0)
+m=Basemap()
+ax=plt.axes(projection=projection)
+ax.stock_img()
+ax.set_title('Orthographic Projection')
+plt.show()
+#robinson projection
+plt.figure(figsize=(5,5))
+projection=ccrs.Robinson()
+m=Basemap()
+ax=plt.axes(projection=projection)
+ax.stock_img()
+ax.coastlines()
+ax. set_title('Robinson Projection')
+plt.show()
